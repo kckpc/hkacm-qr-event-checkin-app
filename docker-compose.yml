@@ -1,0 +1,19 @@
+version: '3'
+services:
+  qr-checkin-app:
+    image: kckpc/qr-checkin-app:v1
+    ports:
+      - "0.0.0.0:3000:3000"
+      - "0.0.0.0:3001:3001"
+    volumes:
+      - ./uploads:/app/uploads
+      - ./participants_data.json:/app/participants_data.json
+      - ./current_activity.json:/app/current_activity.json
+      - ./cert.pem:/app/cert.pem
+      - ./key.pem:/app/key.pem
+    environment:
+      - REACT_APP_API_URL=https://192.168.0.119:3001/api
+      - HTTPS=true
+      - SSL_CRT_FILE=/app/cert.pem
+      - SSL_KEY_FILE=/app/key.pem
+    command: /app/start.sh

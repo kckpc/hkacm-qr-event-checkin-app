@@ -1,0 +1,1080 @@
+.App {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.auto-scan-button {
+  margin-left: 10px;
+}
+.auto-scan-button {
+    margin-left: 10px;
+  }
+  .sound-test-section {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  .sound-test-section h4 {
+    margin-top: 0;
+  }
+  
+  .sound-test-buttons {
+    margin-bottom: 10px;
+  }
+  
+  .sound-test-button {
+    margin-right: 10px;
+  }
+  
+  .sound-attempts ul {
+    padding-left: 20px;
+    margin-top: 5px;
+  }
+  .admin-panel {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .admin-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .sound-test-section,
+  .scan-entries-section {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .refresh-button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .refresh-button:hover {
+    background-color: #45a049;
+  }
+  .sound-status p {
+    margin: 5px 0;
+  }
+  .auto-scan-button.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .stop-scan-button {
+    margin-top: 10px;
+    background-color: #f44336;
+    color: white;
+  }
+.auto-scan-button.active {
+  background-color: #4CAF50;
+  color: white;
+}
+.participant-table ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .participant-table li {
+    margin-bottom: 5px;
+  }
+.stop-scan-button {
+  margin-top: 10px;
+  background-color: #f44336;
+  color: white;
+}
+.App-header {
+  background-color: #1a237e; /* Darker blue for header */
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.App-main {
+  margin-top: 20px;
+}
+
+.error-message {
+  background-color: #ffcdd2; /* Light red background */
+  color: #b71c1c; /* Dark red text */
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border: 1px solid #ef9a9a; /* Light red border */
+}
+
+.check-in-section, .participant-info, .admin-login, .admin-section {
+  background-color: #e8eaf6; /* Light blue background */
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border: 1px solid #c5cae9; /* Light blue border */
+}
+
+.check-in-form, .admin-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.input-field {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button, .upload-button, .export-button {
+  background-color: #2196F3; /* Blue */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover, .upload-button:hover, .export-button:hover {
+  background-color: #1976D2; /* Darker blue on hover */
+}
+
+.status-message, .loading-message {
+  margin-top: 10px;
+}
+
+.warning-message {
+  color: #ff6f00; /* Amber for warnings */
+  font-weight: bold;
+}
+
+.check-in-history {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lock-button {
+  background-color: #ff9800; /* Orange */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.lock-button:hover {
+  background-color: #f57c00; /* Darker orange on hover */
+}
+
+.clear-button {
+  background-color: #FF9800; /* Orange */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s;
+}
+
+.clear-button:hover {
+  background-color: #F57C00; /* Darker orange on hover */
+}
+
+.file-input {
+  margin-bottom: 10px;
+}
+
+.upload-status {
+  margin-top: 10px;
+}
+
+.export-section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.qr-scanner-section {
+  margin: 20px auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scan-button, .stop-scan-button {
+  background-color: #2196F3; /* Blue */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.scan-button:hover, .stop-scan-button:hover {
+  background-color: #1976D2; /* Darker blue on hover */
+}
+
+.qr-video {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 10px;
+}
+
+.participant-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.participant-table th,
+.participant-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.participant-table th {
+  background-color: #3f51b5; /* Indigo */
+  color: white;
+}
+
+.participant-table tr:nth-child(even) {
+  background-color: #e8eaf6; /* Light blue for even rows */
+}
+
+.participant-table tr:hover {
+  background-color: #c5cae9; /* Slightly darker blue on hover */
+}
+
+.clear-confirmation {
+  background-color: #fff3e0; /* Light orange background */
+  border: 1px solid #ffe0b2; /* Light orange border */
+  border-radius: 4px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.clear-confirmation h3 {
+  margin-top: 0;
+  color: #e65100; /* Dark orange */
+}
+
+.confirmation-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.confirm-clear-button {
+  background-color: #F44336; /* Red */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cancel-clear-button {
+  background-color: #9E9E9E; /* Grey */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.confirm-clear-button:hover {
+  background-color: #D32F2F; /* Darker red on hover */
+}
+
+.cancel-clear-button:hover {
+  background-color: #757575; /* Darker grey on hover */
+}
+
+.update-confirmation {
+  background-color: #e3f2fd;
+  border: 1px solid #90caf9;
+  border-radius: 4px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.update-confirmation h3 {
+  margin-top: 0;
+  color: #1565c0;
+}
+
+.confirm-update-button {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancel-update-button {
+  background-color: #9e9e9e;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.confirm-update-button:hover {
+  background-color: #1e88e5;
+}
+
+.cancel-update-button:hover {
+  background-color: #757575;
+}
+
+.auth-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.login-container {
+  flex: 1;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-section, .pic-section {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.lock-button {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.export-section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.export-button {
+  background-color: #2196F3; /* Blue */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.export-button:hover {
+  background-color: #1976D2; /* Darker blue on hover */
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.info-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.info-table tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.info-table td:first-child,
+.info-table td:nth-child(3) {
+  font-weight: bold;
+  width: 25%;
+  background-color: #e8e8e8;
+}
+
+.check-in-history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.check-in-history-table th,
+.check-in-history-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.check-in-history-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.check-in-history-table tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.check-in-history-table tr:hover {
+  background-color: #e8e8e8;
+}
+
+.mode-switch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.mode-switch-button {
+  background-color: #FF9800; /* Orange */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.mode-switch-button:hover {
+  background-color: #F57C00; /* Darker orange on hover */
+}
+
+.mode-switch-confirmation {
+  background-color: #e3f2fd;
+  border: 1px solid #90caf9;
+  border-radius: 4px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.mode-switch-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* ... (rest of the styles remain the same) */
+
+.scanner-container {
+  margin-top: 20px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.check-in-count {
+  font-weight: bold;
+  color: #4caf50;
+  margin-top: 10px;
+}
+
+.admin-controls input[type="text"] {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.App-header h2 {
+  font-size: 1.2em;
+  margin-top: 0.5em;
+}
+
+.check-in-count {
+  font-weight: bold;
+  color: #4caf50;
+  margin-top: 10px;
+}
+
+.total-people {
+  font-weight: bold;
+  color: #2196F3;
+  margin-top: 10px;
+}
+
+.stop-scan-button,
+.scan-button,
+.auto-scan-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.status-message, .scanned-code {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.status-message {
+  color: #4caf50;
+}
+
+.scanned-code {
+  color: #2196F3;
+}
+
+.scanner-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.scan-button, .stop-scan-button, .auto-scan-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  color: white;
+}
+
+.scan-button {
+  background-color: #2196F3; /* Blue */
+}
+
+.stop-scan-button {
+  background-color: #F44336; /* Red */
+}
+
+.auto-scan-button {
+  background-color: #2196F3; /* Blue */
+}
+
+.auto-scan-button.active {
+  background-color: #1565C0; /* Darker blue for active state */
+}
+
+.scanner-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.scan-button, .stop-scan-button, .auto-scan-button, .authorize-camera-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  color: white;
+}
+
+.scan-button {
+  background-color: #2196F3; /* Blue */
+}
+
+.stop-scan-button {
+  background-color: #F44336; /* Red */
+}
+
+.auto-scan-button {
+  background-color: #2196F3; /* Blue */
+}
+
+.auto-scan-button.active {
+  background-color: #1565C0; /* Darker blue for active state */
+}
+
+.authorize-camera-button {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.authorize-camera-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+button:disabled {
+  background-color: #BDBDBD; /* Light grey for disabled state */
+  color: #757575;
+  cursor: not-allowed;
+}
+
+.reset-button {
+  background-color: #FF9800; /* Orange */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s;
+}
+
+.reset-button:hover {
+  background-color: #F57C00; /* Darker orange on hover */
+}
+
+/* Tabs styling */
+.tabs-container {
+  margin-top: 20px;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 2px solid #3f51b5; /* Indigo border */
+  margin-bottom: 20px;
+}
+
+.tab {
+  background-color: #e8eaf6; /* Light indigo */
+  color: #3f51b5; /* Indigo text */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: bold;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  margin-right: 5px;
+}
+
+.tab:hover {
+  background-color: #c5cae9; /* Slightly darker indigo on hover */
+}
+
+.tab.active {
+  background-color: #3f51b5; /* Indigo for active tab */
+  color: white;
+}
+
+/* Admin login section styling */
+.auth-section {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.auth-section h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #3f51b5;
+  font-size: 1.5em;
+  width: 100%;
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: row; /* Change to row for horizontal layout */
+  gap: 15px;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+}
+
+.login-form input {
+  flex: 1; /* Allow input to grow and take available space */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.login-form button {
+  padding: 12px 24px; /* Adjust padding for better button size */
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+.login-form button:hover {
+  background-color: #303f9f;
+}
+
+/* Admin panel styling (when logged in) */
+.admin-login-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #e8eaf6;
+  border-radius: 4px;
+}
+
+.admin-login-status h3 {
+  margin: 0;
+  color: #3f51b5;
+}
+
+.admin-panel {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* ... rest of the existing styles ... */
+
+/* Common styles for all sections */
+.participant-list-section,
+.scan-list-section,
+.auth-section {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.participant-list-section h2,
+.scan-list-section h2,
+.auth-section h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #3f51b5;
+  font-size: 1.5em;
+  width: 100%;
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+}
+
+.login-form input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.login-form button {
+  padding: 12px 24px;
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+.login-form button:hover {
+  background-color: #303f9f;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-header h3 {
+  margin: 0;
+  color: #3f51b5;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.lock-button,
+.refresh-button {
+  padding: 8px 16px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.lock-button:hover,
+.refresh-button:hover {
+  background-color: #d32f2f;
+}
+
+/* ... rest of the existing styles ... */
+
+.input-group, .file-input-container {
+  display: flex;
+  gap: 10px;
+}
+
+.input-group input, .file-input-container input {
+  flex-grow: 1;
+}
+
+.admin-action-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.admin-action-button {
+  background-color: #3f51b5; /* Indigo */
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s, transform 0.1s;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-action-button:hover {
+  background-color: #303f9f; /* Darker indigo on hover */
+  transform: translateY(-2px);
+}
+
+.admin-action-button:active {
+  transform: translateY(0);
+}
+
+/* Specific colors for different actions */
+.admin-action-button.clear-all {
+  background-color: #f44336; /* Red for dangerous actions */
+}
+
+.admin-action-button.clear-all:hover {
+  background-color: #d32f2f;
+}
+
+.admin-action-button.clear-checkins {
+  background-color: #ff9800; /* Orange for warning actions */
+}
+
+.admin-action-button.clear-checkins:hover {
+  background-color: #f57c00;
+}
+
+.admin-action-button.export {
+  background-color: #4caf50; /* Green for export action */
+}
+
+.admin-action-button.export:hover {
+  background-color: #388e3c;
+}
+
+.admin-action-button.reset {
+  background-color: #2196f3; /* Blue for reset action */
+}
+
+.admin-action-button.reset:hover {
+  background-color: #1976d2;
+}
+
+/* ... rest of the existing styles ... */
+
+.sound-test-section {
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+.confirm-button,
+.sound-test-button {
+  background-color: #3f51b5; /* Indigo */
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s, transform 0.1s;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.confirm-button:hover,
+.sound-test-button:hover {
+  background-color: #303f9f; /* Darker indigo on hover */
+  transform: translateY(-2px);
+}
+
+.confirm-button:active,
+.sound-test-button:active {
+  transform: translateY(0);
+}
+
+/* Specific colors for different actions */
+.confirm-button {
+  background-color: #4caf50; /* Green for confirm action */
+}
+
+.confirm-button:hover {
+  background-color: #388e3c;
+}
+
+.sound-test-button.success {
+  background-color: #4caf50; /* Green for success sound */
+}
+
+.sound-test-button.success:hover {
+  background-color: #388e3c;
+}
+
+.sound-test-button.error {
+  background-color: #f44336; /* Red for error sound */
+}
+
+.sound-test-button.error:hover {
+  background-color: #d32f2f;
+}
+
+/* ... rest of the existing styles ... */
+
+.admin-controls .input-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.admin-controls .input-group input {
+  flex: 1;
+  max-width: 50%; /* Limit the width to half */
+}
+
+.admin-controls .input-group .confirm-button {
+  flex: 1;
+  white-space: nowrap;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.input-group input[type="date"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.confirm-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.confirm-button:hover {
+  background-color: #45a049;
+}
+
+.activity-days-input {
+  margin-top: 20px;
+}
+
+.activity-day-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.activity-day-input input[type="date"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.activity-day-input span {
+  min-width: 80px;
+}
+
+.confirm-button {
+  margin-top: 10px;
+}
