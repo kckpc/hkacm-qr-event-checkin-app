@@ -8,6 +8,7 @@ const moment = require('moment-timezone');
 const https = require('https'); // Change this from http to https
 const os = require('os');
 const cors = require('cors');
+const getLocalIP = require('./get-ip');
 
 // Remove this line as fs is already imported above
 // const fs = require('fs');
@@ -392,31 +393,14 @@ const httpsOptions = {
 };
 
 const PORT = process.env.PORT || 3001;
-const HOST = process.env.HOST || '0.0.0.0';
+const HOST = getLocalIP();
 
-const server = https.createServer(httpsOptions, app);
-
-const startServer = (port) => {
-  server.listen(port, HOST, () => {
-    console.log(`Server is running on https://${HOST}:${port}`);
-    console.log(`Also available on your network at https://${process.env.SERVER_IP || 'localhost'}:${port}`);
+const startServer = () => {
+  https.createServer(httpsOptions, app).listen(PORT, HOST, () => {
+    console.log(`Server is running on https://${HOST}:${PORT}`);
   }).on('error', (err) => {
-    if (err.code === 'EADDRINUSE') {
-      console.log(`Port ${port} is busy, trying with port ${port + 1}`);
-      startServer(port + 1);
-    } else {
-      console.error('Error starting server:', err);
-    }
+    console.error('Error starting server:', err);
   });
 };
 
-// Add this signal handler
-process.on('SIGINT', () => {
-  console.log('Shutting down server...');
-  server.close(() => {
-    console.log('Server shut down.');
-    process.exit(0);
-  });
-});
-
-startServer(PORT);
+startServer();

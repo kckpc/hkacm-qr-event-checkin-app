@@ -4,15 +4,19 @@
   "description": "QR Code Check-in Application",
   "scripts": {
     "prestart": "node get-ip.js frontend",
-    "start": "npx kill-port 3000 && cross-env HTTPS=true SSL_CRT_FILE=cert.pem SSL_KEY_FILE=key.pem HOST=0.0.0.0 PORT=3000 react-scripts start",
+    "start": "react-app-rewired start",
     "start:prod": "serve -s build -l 3000 --ssl-cert cert.pem --ssl-key key.pem",
-    "build": "react-scripts build",
+    "build": "react-app-rewired build",
     "preserver": "node get-ip.js backend",
-    "server": "npx kill-port 3001 && node -r dotenv/config server.js",
-    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start\"",
+    "server": "node -r dotenv/config server.js",
+    "dev": "concurrently \"npm run server\" \"npm run start\"",
     "generate-cert": "node generate-cert.js",
     "docker:build": "docker build -t qr-checkin-app .",
-    "docker:run": "docker run -p 3000:3000 -p 3001:3001 -e HOST=0.0.0.0 qr-checkin-app"
+    "docker:run": "docker run -p 3000:3000 -p 3001:3001 -e HOST=0.0.0.0 qr-checkin-app",
+    "docker:tag": "docker tag qr-checkin-app kckpc/qr-checkin-app:latest",
+    "docker:push": "docker push kckpc/qr-checkin-app:latest",
+    "docker:publish": "npm run docker:build && npm run docker:tag && npm run docker:push",
+    "test": "react-app-rewired test"
   },
   "dependencies": {
     "@types/file-saver": "^2.0.7",
@@ -39,6 +43,7 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "concurrently": "^8.2.1",
     "cross-env": "^7.0.3",
+    "react-app-rewired": "^2.2.1",
     "serve": "^14.2.1",
     "wait-on": "^7.0.1"
   },

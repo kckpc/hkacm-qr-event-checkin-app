@@ -1,21 +1,28 @@
 const os = require('os');
 const fs = require('fs');
 
-function getIP() {
+function getLocalIP() {
   const interfaces = os.networkInterfaces();
+  let preferredIP = null;
+
   for (const devName in interfaces) {
     const iface = interfaces[devName];
     for (let i = 0; i < iface.length; i++) {
       const { address, family, internal } = iface[i];
       if (family === 'IPv4' && !internal) {
-        return address;
+        if (address.startsWith('192.168.')) {
+          return address; // Immediately return if we find a 192.168.x.x address
+        } else if (!preferredIP && !address.startsWith('172.')) {
+          preferredIP = address; // Store the first non-172.x.x.x address as a fallback
+        }
       }
     }
   }
-  return '0.0.0.0'; // fallback to all interfaces
+
+  return preferredIP || '127.0.0.1'; // Return the preferred IP, or localhost as a last resort
 }
 
-const ip = getIP();
+const ip = getLocalIP();
 console.log('Detected IP:', ip);
 
 if (process.argv[2] === 'frontend') {
@@ -26,4 +33,4 @@ if (process.argv[2] === 'frontend') {
   fs.writeFileSync('.env', `SERVER_IP=${ip}\nPORT=3001\n`);
 }
 
-module.exports = getIP;
+module.exports = getLocalIP;
